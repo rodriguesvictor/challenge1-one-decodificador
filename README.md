@@ -6,6 +6,7 @@ Olá, este é o primeiro desafio feito por mim no **Oracle ONE**.  O projeto se 
 Criptografa, descriptografa e copia textos, o usuário deve utilizar chaves de criptografia e descriptografia.
 
 **As "chaves" de criptografia são:**
+
 `A letra "e" é convertida para "enter"`  
 `A letra "i" é convertida para "imes"`  
 `A letra "a" é convertida para "ai"`  
@@ -13,6 +14,7 @@ Criptografa, descriptografa e copia textos, o usuário deve utilizar chaves de c
 `A letra "u" é convertida para "ufat"`
 
 **As "chaves" de descriptografia são:**  
+
 `A palavra "enter" é convertida para "e"`  
 `A palavra "imes" é convertida para "i"`  
 `A palavra "ai" é convertida para "a"`  
