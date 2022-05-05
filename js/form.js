@@ -10,7 +10,7 @@ botaoCriptografa.addEventListener("click", function(event) {
 event.preventDefault();
 
 var erros = validaCampo(text);
-console.log(erros);
+
 
 if (erros.length > 0) {
     exibeMensagensDeErro(erros);
@@ -35,7 +35,6 @@ botaoDescriptografa.addEventListener("click", function(event) {
     event.preventDefault();
 
     var erros = validaCampo(text);
-    console.log(erros);
 
     if (erros.length > 0) {
         exibeMensagensDeErro(erros);
