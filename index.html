@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Decodificador de texto
+    </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo" alt="Logo da Alura com a letra A"></div>
+    </header>
+
+<main>
+    <form class="form-principal">
+       <textarea id="campo-digite" name="campo" placeholder="Digite seu texto" cols="45" rows="9"></textarea>
+       <ul class="mensagens-erro">
+        <li>Apenas letras minúsculas e sem acento.</li>
+    </ul>
+        <section class="botoes-principais">
+            <button id="botao-criptografa">Criptografar</button>
+            <button id="botao-descriptografa">Descriptografar</button>
+        </section>
+    </form>
+    <div class="retangulo">
+        <textarea class="resultado-criptografia" cols="15" rows="15"></textarea>
+        <section class="conteudo-retangulo">
+            <img src="img/notext.svg" alt="Imagem de um boneco ilustrando que não há nada digitado">
+            <h1>Nenhuma mensagem encontrada</h1>
+            <h2>Digite um texto que você deseja criptografar ou descriptografar</h2>
+        </section>
+        <button class="botao-copy">Copiar</button>
+    </div>
+    
+</main> 
+ <footer>
+     <p>Victor Rodrigues - 2022</p>
+ </footer>
+<script src="js/form.js"></script> 
+</body>
+</html>
