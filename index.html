@@ -16,7 +16,7 @@
     </header>
 
 <main>
-    <form class="form-principal">
+    <div class="container-principal">
        <textarea id="campo-digite" name="campo" placeholder="Digite seu texto"></textarea>
        <ul class="mensagens-erro">
         <li>Apenas letras minúsculas e sem acento.</li>
@@ -24,10 +24,10 @@
         <section class="botoes-principais">
             <button id="botao-criptografa">Criptografar</button>
             <button id="botao-descriptografa">Descriptografar</button>
-        </section>
+        </div>
     </form>
     <div class="retangulo">
-        <textarea class="resultado-criptografia" cols="15" rows="15"></textarea>
+        <textarea class="resultado-criptografia"></textarea>
         <section class="conteudo-retangulo">
             <img src="img/notext.svg" alt="Imagem de um boneco ilustrando que não há nada digitado">
             <h1>Nenhuma mensagem encontrada</h1>
@@ -38,7 +38,7 @@
     
 </main> 
  <footer>
-     <p>Victor Rodrigues - 2022</p>
+     <p>Desenvolvido por Victor Rodrigues - 2022</p>
  </footer>
 <script src="js/form.js"></script> 
 </body>

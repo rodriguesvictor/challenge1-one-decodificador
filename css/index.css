@@ -22,6 +22,7 @@ main{
 	display: flex;
     position: relative;
     flex-direction: row;
+	justify-content: center;
 }
 
  header div#logo {
@@ -38,13 +39,12 @@ main{
 	transform: scale(1.5);
 }
 
-.form-principal{
+.container-principal{
 	display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    width: 80%;
-    margin-left: 20%;
+    width: 70%;
     margin-top: 5%;
 }
 
@@ -52,17 +52,18 @@ main{
 	color: #0A3871;
 }
 
-.form-principal textarea{
+.container-principal textarea{
 	border-style: none;
 	font-size: 2em;
 	color: #0A3871;
 	background: none;
 	resize: none;
-	width: 100%;
+	width: 60%;
     height: 80%;
+	margin-left: 25%;
 }
 
-.form-principal textarea:focus{
+.container-principal textarea:focus{
     box-shadow: 0 0 0 0;
     outline: 0;
 }
@@ -72,9 +73,9 @@ main{
 	color: #495057;
 	opacity: 0.8;
 	font-size: 0.8em;
-	margin-left: 5%;
+	margin-left: 45%;
 	margin-bottom: 2%;
-	padding-left: 3.5%;
+	padding-left: 2.5%;
 	background-image: url('../img/erroricon.svg');
 	background-repeat: no-repeat;
 	background-position: left;
@@ -86,6 +87,8 @@ main{
     flex-direction: row;
     align-items: flex-start;
     position: relative;
+	margin-left: 45%;
+
 }
 
 #botao-criptografa{
@@ -131,8 +134,6 @@ main{
     position: relative;
     width: 24%;
 	height: 40em;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
     background: #FFFFFF;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 	border-radius: 32px;
@@ -148,6 +149,7 @@ main{
     resize: none;
     border-style: none;
 	opacity: 0;
+	height: 80%;
 }
 
 .resultado-criptografia:focus{
@@ -252,12 +254,12 @@ footer p {
 		flex-direction: column;
 	}
 
-	.form-principal {
+	.container-principal {
 		width: auto;
 		margin-left: 0;
 		margin-top: 0;
 	}
-	.form-principal textarea {
+	.container-principal textarea {
 		margin-left: 2%;
 	}
 
