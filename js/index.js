@@ -2,6 +2,7 @@ var botaoCriptografa = document.querySelector("#botao-criptografa");
 var botaoDescriptografa = document.querySelector("#botao-descriptografa");
 var text = document.querySelector("textarea#campo-digite");
 var mensagensErro = document.querySelector(".mensagens-erro");
+var botaoCopia = document.querySelector(".botao-copy");
 
 tiraResultadoDoRetangulo();
 tiraBotaoCopiarDoRetangulo();
