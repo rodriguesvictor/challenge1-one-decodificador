@@ -1,33 +1,27 @@
 var botaoCriptografa = document.querySelector("#botao-criptografa");
 var botaoDescriptografa = document.querySelector("#botao-descriptografa");
 var text = document.querySelector("textarea#campo-digite");
-var botaoCopia = document.querySelector(".botao-copy");
+var mensagensErro = document.querySelector(".mensagens-erro");
 
 tiraResultadoDoRetangulo();
 tiraBotaoCopiarDoRetangulo();
 
 botaoCriptografa.addEventListener("click", function(event) {
-event.preventDefault();
+    event.preventDefault();
 
-var erros = validaCampo(text);
+    var erros = validaCampo(text);
 
 
-if (erros.length > 0) {
-    exibeMensagensDeErro(erros);
-    return
-}
+    if (erros.length > 0) {
+        mensagensErro.classList.remove('fadeOut');
+        exibeMensagensDeErro(erros);
+        return
+    }
 
-var mensagensErro = document.querySelector(".mensagens-erro");
-mensagensErro.innerHTML = "Apenas letras minúsculas e sem acento.";
+    mensagensErro.classList.add('fadeOut');
 
-fazCriptografia(text);
-tiraConteudoDoRetangulo()
-
-document.getElementsByClassName("botao-copy")[0].style.display = "block";
-exibeFadeIn(".botao-copy");
-
-document.getElementsByClassName("resultado-criptografia")[0].style.display = "block";
-exibeFadeIn(".resultado-criptografia");
+    fazCriptografia(text);
+    tiraConteudoDoRetangulo()
 });
 
 
@@ -37,21 +31,15 @@ botaoDescriptografa.addEventListener("click", function(event) {
     var erros = validaCampo(text);
 
     if (erros.length > 0) {
+        mensagensErro.classList.remove('fadeOut');
         exibeMensagensDeErro(erros);
         return
     }
 
-    var mensagensErro = document.querySelector(".mensagens-erro");
-    mensagensErro.innerHTML = "Apenas letras minúsculas e sem acento.";
+    mensagensErro.classList.add('fadeOut');
 
     fazDescriptografia(text);
     tiraConteudoDoRetangulo();
-
-    document.getElementsByClassName("botao-copy")[0].style.display = "block";
-    exibeFadeIn(".botao-copy");
-    document.getElementsByClassName("resultado-criptografia")[0].style.display = "block";
-    exibeFadeIn(".resultado-criptografia");
-     
 })
 
 
@@ -72,7 +60,8 @@ function fazCriptografia(text) {
         var text = text.replace(/u/g, 'ufat');
 
         document.getElementsByClassName('resultado-criptografia')[0].innerHTML = `${text}`;
- 
+        exibeFadeIn(".botao-copy");
+        exibeFadeIn(".resultado-criptografia");
 }
 
 }
@@ -88,7 +77,8 @@ function fazDescriptografia(text) {
         var text = text.replace(/ufat/g, 'u');
 
         document.getElementsByClassName('resultado-criptografia')[0].innerHTML = `${text}`;
-        
+        exibeFadeIn(".botao-copy");
+        exibeFadeIn(".resultado-criptografia");
     }
     
 }
@@ -111,39 +101,38 @@ function tiraConteudoDoRetangulo() {
 
 function tiraResultadoDoRetangulo() {
     document.getElementsByClassName("resultado-criptografia")[0].style.display = "none"; 
-  }
+}
 
 function tiraBotaoCopiarDoRetangulo() {
     document.getElementsByClassName("botao-copy")[0].style.display = "none"; 
-  }
+}
 
-  function validaCampo(text) {
+function validaCampo(text) {
     var erros = [];
     if (text.value == 0) erros.push("Digite algum texto!");
     if (/[A-Z-À-Ú-à-ú]/.test(text.value)) erros.push("Apenas letras minúsculas e sem acento.");
     return erros;
   }
 
-  function exibeMensagensDeErro(erros){
+function exibeMensagensDeErro(erros){
     var ul = document.querySelector(".mensagens-erro");
-   ul.innerHTML = "";
+    ul.innerHTML = "";
     erros.forEach(function(erro){
-        var li = document.createElement("li");
-        setTimeout(function(){
+    var li = document.createElement("li");
+    setTimeout(function(){
             ul.classList.add('fadeIn');
-            },500);
-            ul.classList.remove('fadeIn');
+        },500);
+        ul.classList.remove('fadeIn');
         li.textContent = erro;
-        ul.appendChild(li);
-       
+        ul.appendChild(li);  
     });
 }
 
 function exibeFadeIn(elemento){
     var varElemento = document.querySelector(elemento);
+    varElemento.style.display = "block";
     setTimeout(function(){
         varElemento.classList.add('fadeIn');
-        },500);
-        varElemento.classList.remove('fadeIn');
-
+    },500);
+    varElemento.classList.remove('fadeIn');
 }

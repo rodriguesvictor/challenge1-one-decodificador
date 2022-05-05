@@ -233,6 +233,11 @@ footer p {
 	transition: 0.5s;
 }
 
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
 @media screen and (max-width:  480px) {
 
 	header {
@@ -243,11 +248,9 @@ footer p {
 	}
 
 	header div#logo {
-
 		background-size: 80%;
 		height: 100%;
 		width: 100%;
-		
 	}
 
 	main {
@@ -318,7 +321,6 @@ footer p {
 	}
 
 	.resultado-criptografia {
-
 		height: auto;
 	}
 
