@@ -259,8 +259,16 @@ footer p {
 		margin-left: 0;
 		margin-top: 0;
 	}
+
 	.container-principal textarea {
-		margin-left: 2%;
+		width: auto;
+    	height: auto;
+    	margin-left: 5%;
+	}
+
+	.mensagens-erro {
+		margin-left: 5%;
+		padding-left: 5%;
 	}
 
 	.botoes-principais {
